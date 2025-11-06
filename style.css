@@ -1,0 +1,192 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*my main container*/
+.container{
+   border-radius: 12px;
+   font-family: poppins;
+   font-weight: 400;
+   padding: 20px 25px;
+   text-align: center;
+   box-shadow:  5px 5px 15px hsla(0, 0%, 0%,0.9);
+   backdrop-filter: blur(6px);
+   width: 350px;
+   color: #f2f2f2;
+   text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+
+   
+   
+   
+}
+/*style for main heading*/
+h2{
+    color:#fff;
+    letter-spacing: 1px;
+}
+/*style for sub headings*/
+h4{
+        color: #fff;
+        background: rgba(255, 255, 255, 0.37);
+        border-radius: 7px;
+        font-weight: 600;
+
+}
+/*hover style for number inputbox */
+input[type="number"]:hover{
+        transform: scale(1.05);/*input field scales up when hovered*/
+        transition: all 0.2s ease;
+}
+
+/*checkbox container*/
+.checkbox-container{
+     display: flex;
+     flex-direction:column;/*stacks the content vertically*/
+     align-items: flex-start; /*perfectly aligns the content and 
+                                places them on the left side*/
+     
+      width: fit-content; /* makes container only as wide as its content */
+      margin: 0 auto; /**centers that content horizonatlly. this code only works if
+                          the childs width is smaller than its parent,thats where fit-content comesin.*/
+      gap:2px;
+    
+}
+
+/*style for checkboxes*/
+input[type="checkbox"]{
+
+     margin-right: 7px ; /*increase space between checkbox and its text */
+     accent-color: crimson;
+}
+/*hover effect for checkboxes*/
+input[type="checkbox"]:hover{
+
+      transform: scale(1.3); /*scales up the checkbox size when hovered over it*/
+      transition: all 0.2s ease;
+
+}
+
+/*style for input box*/
+#length{
+    place-items: center;
+    padding: 3px 4px;
+    border-radius: 4px;
+    border: none;
+    box-shadow:  5px 5px 15px hsla(0, 0%, 0%,0.7); 
+}
+/*style for generate button*/
+#mybutt{
+    padding: 5px 7px;
+    border-radius: 7px;
+    border: none;
+    box-shadow:  5px 5px 15px hsla(0, 0%, 0%,0.7);
+    background-color: hsla(0, 90%, 45%, 0.945);
+    color: white;
+    cursor: pointer;
+}
+/*hover effect for generate button*/
+#mybutt:hover{
+    background-color:  hsla(0, 95%, 50%, 0.945);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+/*style for generated password */
+#mypara{
+     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    width: fit-content;
+    padding: 2px 4px;
+    border-radius: 7px;
+    color: #fff;
+    font-family: monospace;
+    display: none;
+
+    word-break: break-all ; /*prevents long passwords from overflowing 
+                                in narrow screen*/
+}
+
+/*style for copy  button*/
+#copybtn{
+     padding: 5px 7px;
+    border-radius: 7px;
+    border: none;
+    box-shadow:  5px 5px 15px hsla(0, 0%, 0%,0.7);
+    background-color: hsla(0, 90%, 45%, 0.945);
+    color: white;
+    cursor: pointer;
+}
+/*hover effect for copy button*/
+#copybtn:hover{
+     background-color:  hsla(0, 95%, 50%, 0.945);
+     transform: scale(1.05);
+     transition: all 0.2s ease;
+}
+/*making both buttons bold*/
+#mybutt,#copybtn{
+    font-weight: 600;
+
+}
+/*container for buttons*/
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap:10px ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+
+
+/*for screens smaller than 600px (mobile phones)*/
+@media (max-width: 600px) {
+  .container {
+      width: 90%; /*make the box width adjust to smaller screens*/
+      padding: 15px; /*reduce padding for compact look*/
+  }
+
+  h2 {
+      font-size: 1.3rem; /*make heading smaller on mobile*/
+  }
+
+  h4 {
+      font-size: 1rem;
+      text-align: center;
+  }
+
+  #length {
+      width: 100%; /*make input field full width for small screens*/
+  }
+
+  .btn-container {
+      flex-direction: column; /*stack buttons vertically for mobile*/
+      gap: 8px;
+  }
+
+  #mybutt, #copybtn {
+      width: 100%; /*full-width buttons on mobile*/
+      padding: 10px;
+  }
+}
+
+/*for tablets (601px to 900px)*/
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+      width: 70%; /*slightly smaller width for tablet view*/
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+}
